@@ -1,0 +1,58 @@
+% Set font size
+\documentclass[a4paper, 12pt]{article}
+% Font and language settings
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+% Links
+\usepackage{hyperref}
+% Images
+\usepackage{graphicx}
+% Better controls over figure envirnoments
+\usepackage{float}
+% Various math symobs
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathtools}
+% Multiple text columns
+\usepackage{multicol}
+% Miscellaneous symobls
+\usepackage{wasysym}
+% Custom enumeration symols
+\usepackage{enumerate}
+% Able to indent text with adjustwidth environment
+\usepackage{changepage}
+% More dashing option. Most important is \dashuline{} used for short proofs
+\usepackage[normalem]{ulem}
+
+% Comment this out if you want normal paragraph indents without empty lines between them.
+% This options are set primarly for texts with a lot of shorter paragraphs, like various notes.
+\setlength{\parindent}{0px}
+\setlength{\parskip}{10px}
+
+% Some macros for common number sets
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\CC}{\mathbb{C}}
+
+% Set title, author and date
+\title{Analiza 1}
+\author{Vid Drobnič}
+\date{}
+
+\begin{document}
+    % First page only for title and without page number
+    \maketitle
+	\thispagestyle{empty}
+	\pagebreak
+	\setcounter{page}{1}
+
+    % Table of contents, text on the next page
+	\tableofcontents
+    \pagebreak
+
+\end{document}
