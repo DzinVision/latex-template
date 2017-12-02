@@ -1,0 +1,97 @@
+\documentclass{beamer}
+% Font and language settings
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+% Various math symbols
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathtools}
+% Help with alignment
+\usepackage{array}
+% Miscellaneous symobls
+\usepackage{wasysym}
+% Custom enumeration symbols
+\usepackage{enumerate}
+% Images and drawing
+\usepackage{graphicx}
+\usepackage{tikz}
+% Better table rulers
+\usepackage{booktabs}
+
+% Different fonts and font type
+\usepackage{palatino}
+\usefonttheme{serif}
+
+
+% Include macros
+\include{macros}
+
+% Themes for beamer
+\usetheme{Berlin}
+% Theme costumization (probably can be commented out)
+\usecolortheme{default}
+\useoutertheme{infolines}
+\useinnertheme[shadows]{rounded}
+
+%Title for presentation
+\title{Beamer Template}
+\subtitle{Presentation Subtitle}
+\author{Vid Drobnič}
+% Short and long name
+\institute[FMF]{FMF Fakulteta za matematiko in fiziko}
+\date{}
+
+% Theorem sample
+\newtheorem{definicija}{Definicija}
+\newtheorem{izre}{Izrek}
+
+\begin{document}
+	% TItle Frame
+	\begin{frame}
+	\maketitle
+	\end{frame}
+
+	\begin{frame}{Blocks}
+		Important blocks are \texttt{block, exampleblock, alertblock}.
+		\begin{block}{Block}
+			\texttt{block} with title.
+		\end{block}
+		\begin{exampleblock}{Example Block}
+			\texttt{exampleblock} with title.
+		\end{exampleblock}
+		\begin{alertblock}{Alert Block}
+			\texttt{alertblock} with title.
+		\end{alertblock}
+	\end{frame}
+
+	\begin{frame}{Pause list}
+		\begin{itemize}
+			\item<1-> First
+			\item<2-> Second
+			\item<3-> Third
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{Table with pause}
+		\begin{tabular}{c|cccc}
+			Oznaka & A & B & C & D \\ \hline \pause
+			X & 1 & 2 & 3 & 4 \\ \pause
+			Y & 3 & 4 & 5 & 6 \\ \pause
+			Z & 5 & 6 & 7 & 8 \\
+		\end{tabular}
+	\end{frame}
+
+	\begin{frame}{Table with Onslide}
+		% Package array is required
+		% At the end {\onslide} si required because of unknown reasons
+		\begin{tabular}{c| >{\onslide<2->}c >{\onslide<3->}c >{\onslide<4->}c >{\onslide<5->}c <{\onslide}}
+			Oznaka & A & B & C & D \\ \hline
+			X & 1 & 2 & 3 & 4 \\
+			Y & 3 & 4 & 5 & 6 \\
+			Z & 5 & 6 & 7 & 8 \\
+		\end{tabular}
+	\end{frame}
+\end{document}

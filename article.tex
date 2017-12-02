@@ -17,6 +17,8 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{mathtools}
+% Help with alignment
+\usepackage{array}
 % Multiple text columns
 \usepackage{multicol}
 % Miscellaneous symobls
@@ -27,18 +29,19 @@
 \usepackage{changepage}
 % More dashing option. Most important is \dashuline{} used for short proofs
 \usepackage[normalem]{ulem}
+% Better rulers for tables
+\usepackage{booktabs}
+% Units and unit setup
+\usepackage{siunitx}
+\sisetup{output-decimal-marker={,}, group-digits=false}
 
 % Comment this out if you want normal paragraph indents without empty lines between them.
 % This options are set primarly for texts with a lot of shorter paragraphs, like various notes.
 \setlength{\parindent}{0px}
 \setlength{\parskip}{10px}
 
-% Some macros for common number sets
-\newcommand{\NN}{\ensuremath{\mathbb{N}}}
-\newcommand{\ZZ}{\ensuremath{\mathbb{Z}}}
-\newcommand{\QQ}{\ensuremath{\mathbb{Q}}}
-\newcommand{\RR}{\ensuremath{\mathbb{R}}}
-\newcommand{\CC}{\ensuremath{\mathbb{C}}}
+% Include macros
+\include{macros}
 
 % Set title, author and date
 \title{Article Template}
